@@ -125,7 +125,7 @@ function App() {
             <a href="#features" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">ARSENAL</a>
             <a href="#workflow" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">WORKFLOW</a>
             <a href="#specs" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">SPECS</a>
-            <a href="#download" className="px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
+            <a href="/MediaForge-v1.5.exe" download="MediaForge-v1.5.exe" className="px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
               GET IT NOW
             </a>
           </div>
@@ -155,7 +155,7 @@ function App() {
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <a href="#download" className="group relative px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] flex items-center justify-center gap-3 overflow-hidden">
+                <a href="/MediaForge-v1.5.exe" download="MediaForge-v1.5.exe" className="group relative px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] flex items-center justify-center gap-3 overflow-hidden">
                   <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                   <Download className="w-5 h-5" />
                   DOWNLOAD (130MB .EXE)
