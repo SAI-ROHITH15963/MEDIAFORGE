@@ -1,7 +1,7 @@
 import { motion, AnimatePresence, type Variants } from 'motion/react'
 import { 
   Download, MonitorPlay, Shield, Image as ImageIcon, Volume2, 
-  Settings2, FolderDown, FileVideo, HardDrive, Cpu, ChevronDown, ChevronRight, X
+  Settings2, FolderDown, FileVideo, HardDrive, Cpu, ChevronDown, ChevronRight, X, Mail
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -363,6 +363,29 @@ def build_ffmpeg_command(self):
             ].map((faq, i) => (
               <FaqItem key={i} question={faq.q} answer={faq.a} />
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Recommendations CTA */}
+      <section className="py-24 border-t border-border bg-card-elevated relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
+            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-4xl md:text-5xl mb-6 text-foreground">
+              GOT ANY RECOMMENDATIONS?
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+              We're constantly forging new tools. If you have an idea for a feature, a new preset, or just want to tell us about it, shoot us an email!
+            </motion.p>
+            <motion.a 
+              variants={fadeInUp}
+              href="mailto:ideas@mediaforge.app?subject=MediaForge%20Feature%20Recommendation"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-primary text-primary font-heading font-bold text-lg rounded hover:bg-primary hover:text-primary-foreground transition-all"
+            >
+              <Mail className="w-5 h-5" />
+              TELL US ABOUT IT
+            </motion.a>
           </motion.div>
         </div>
       </section>
