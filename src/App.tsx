@@ -448,36 +448,40 @@ def build_ffmpeg_command(self):
       </Modal>
 
       <Modal isOpen={activeModal === 'terms'} onClose={() => setActiveModal(null)} title="Terms of Service">
-        <div className="space-y-4 text-muted-foreground">
+        <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
           <p>
-            By downloading and using MediaForge, you agree to these terms:
+            By downloading, installing, or using MediaForge, you explicitly agree to the following terms:
           </p>
-          <p>
-            1. <strong>As-Is Basis</strong>: The software is provided "as is", without warranty of any kind, express or implied.
-          </p>
-          <p>
-            2. <strong>Lawful Use</strong>: You agree not to use MediaForge for infringing upon copyright laws or pirating intellectual property. You should only convert and upscale media that you own or have the explicit right to modify.
-          </p>
-          <p>
-            3. <strong>Liability</strong>: We are not responsible for any data loss, hardware strain, or other issues resulting from processing intensive batches on your system.
-          </p>
+          <div className="space-y-3">
+            <div>
+              <strong className="text-foreground">1. No Warranty ("As-Is" Basis)</strong>
+              <p>MediaForge is provided "as is" and "as available", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the developers be liable for any claim, damages, data loss, hardware degradation, or other liability arising from your use of the software.</p>
+            </div>
+            <div>
+              <strong className="text-foreground">2. Copyright & Lawful Use</strong>
+              <p>MediaForge is a strictly neutral processing tool. You are solely and entirely responsible for the media you process. You agree NOT to use this software to bypass DRM, infringe upon copyrights, pirate intellectual property, or process material for which you do not hold the explicit legal rights. The developers of MediaForge do not condone, support, or take any responsibility for copyright infringement committed by users.</p>
+            </div>
+            <div>
+              <strong className="text-foreground">3. Indemnification</strong>
+              <p>You agree to indemnify, defend, and hold harmless the developers of MediaForge from any claims, damages, liabilities, and expenses (including legal fees) arising out of your misuse of the software or your violation of any third-party rights, including copyright.</p>
+            </div>
+          </div>
         </div>
       </Modal>
 
       <Modal isOpen={activeModal === 'license'} onClose={() => setActiveModal(null)} title="License Information">
-        <div className="space-y-4 text-muted-foreground">
-          <p>
-            <strong>MediaForge UI License</strong><br />
-            Copyright © {new Date().getFullYear()} MediaForge<br />
-            Licensed under the MIT License.
-          </p>
-          <p>
-            <strong>FFmpeg License</strong><br />
-            MediaForge bundles a statically compiled version of FFmpeg. FFmpeg is free software licensed under the GNU Lesser General Public License (LGPL) version 2.1 or later. 
-          </p>
-          <p>
-            This product is not affiliated with the FFmpeg project in any official capacity. The FFmpeg trademarks are the property of Fabrice Bellard.
-          </p>
+        <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+          <div>
+            <strong className="text-foreground">MediaForge UI & Core Logic</strong>
+            <p>Copyright © {new Date().getFullYear()} MediaForge</p>
+            <p>The Python core and React interface are licensed under the MIT License. You are free to modify, distribute, and use this software for both commercial and non-commercial purposes, provided the original copyright notice is included.</p>
+          </div>
+          <div className="pt-4 border-t border-border">
+            <strong className="text-foreground">Third-Party Software: FFmpeg</strong>
+            <p>MediaForge relies on FFmpeg for underlying multimedia processing. FFmpeg is distributed as a standalone, unmodified executable alongside this application and is invoked strictly via the command-line interface, constituting an "aggregate" work.</p>
+            <p className="mt-2">FFmpeg is free software licensed under the GNU Lesser General Public License (LGPL) version 2.1 or later. Some specific builds may be subject to the GNU General Public License (GPL) depending on compilation flags. The source code for FFmpeg can be obtained from <a href="https://ffmpeg.org" target="_blank" rel="noreferrer" className="text-primary hover:underline">ffmpeg.org</a>.</p>
+            <p className="mt-2 text-xs">MediaForge is not affiliated with, endorsed by, or sponsored by the FFmpeg project. The FFmpeg trademark is the property of Fabrice Bellard.</p>
+          </div>
         </div>
       </Modal>
 
