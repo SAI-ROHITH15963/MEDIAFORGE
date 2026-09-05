@@ -1,16 +1,16 @@
-import { motion, AnimatePresence } from 'motion/react'
+import { motion, AnimatePresence, type Variants } from 'motion/react'
 import { 
-  Download, MonitorPlay, Zap, Shield, Image as ImageIcon, Volume2, 
+  Download, MonitorPlay, Shield, Image as ImageIcon, Volume2, 
   Settings2, FolderDown, FileVideo, HardDrive, Cpu, ChevronDown, ChevronRight, X
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
