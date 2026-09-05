@@ -1,7 +1,7 @@
 import { motion, AnimatePresence, type Variants } from 'motion/react'
 import { 
   Download, MonitorPlay, Shield, Image as ImageIcon, Volume2, 
-  Settings2, FolderDown, FileVideo, HardDrive, Cpu, ChevronDown, ChevronRight, X, Mail
+  Settings2, FolderDown, FileVideo, HardDrive, Cpu, ChevronDown, ChevronRight, X, Mail, CheckCircle2
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -107,6 +107,40 @@ type ModalType = 'releaseNotes' | 'privacy' | 'terms' | 'license' | null;
 function App() {
   const [activeModal, setActiveModal] = useState<ModalType>(null);
   const [recommendation, setRecommendation] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async () => {
+    if (!recommendation.trim()) return;
+    
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    try {
+      // Replace YOUR_FORMSPREE_ID with the actual ID from formspree.io
+      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          message: recommendation,
+        }),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setRecommendation("");
+        // Reset success message after 3 seconds
+        setTimeout(() => setSubmitStatus('idle'), 3000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+    }
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="min-h-screen selection:bg-primary/30 overflow-x-hidden relative">
@@ -387,13 +421,30 @@ def build_ffmpeg_command(self):
                 placeholder="I would love to see a feature that..."
                 className="w-full h-32 p-4 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none mb-4 shadow-inner"
               />
-              <a 
-                href={`mailto:somarohith68@gmail.com?subject=MediaForge%20Recommendation&body=${encodeURIComponent(recommendation)}`}
-                className="inline-flex items-center justify-center w-full gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+              <button 
+                onClick={handleSubmit}
+                disabled={isSubmitting || !recommendation.trim()}
+                className="inline-flex items-center justify-center w-full gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Mail className="w-5 h-5" />
-                SEND RECOMMENDATION VIA EMAIL
-              </a>
+                {isSubmitting ? (
+                  <span className="animate-pulse">SENDING...</span>
+                ) : submitStatus === 'success' ? (
+                  <>
+                    <CheckCircle2 className="w-5 h-5" />
+                    SENT SUCCESSFULLY!
+                  </>
+                ) : submitStatus === 'error' ? (
+                  <>
+                    <X className="w-5 h-5" />
+                    ERROR SENDING (CHECK ID)
+                  </>
+                ) : (
+                  <>
+                    <Mail className="w-5 h-5" />
+                    SEND RECOMMENDATION
+                  </>
+                )}
+              </button>
             </motion.div>
           </motion.div>
         </div>
