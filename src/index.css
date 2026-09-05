@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Chakra Petch", system-ui, sans-serif;
+
+  --color-background: hsl(222, 47%, 4%);
+  --color-foreground: hsl(210, 40%, 98%);
+  --color-primary: hsl(217, 91%, 60%);
+  --color-primary-foreground: hsl(222, 47%, 11%);
+  --color-muted-foreground: hsl(215, 20%, 65%);
+  --color-border: hsl(217, 32%, 17%);
+  --color-card: hsl(222, 47%, 6%);
+  --color-card-elevated: hsl(222, 47%, 9%);
+  
+  --radius-xl: 1rem;
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+@layer base {
+  :root {
+    --background: hsl(222, 47%, 4%);
+    --foreground: hsl(210, 40%, 98%);
+    --primary: hsl(217, 91%, 60%);
+    --primary-foreground: hsl(222, 47%, 11%);
+    --muted-foreground: hsl(215, 20%, 65%);
+    --border: hsl(217, 32%, 17%);
+    --card: hsl(222, 47%, 6%);
+    --card-elevated: hsl(222, 47%, 9%);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
