@@ -106,6 +106,7 @@ type ModalType = 'releaseNotes' | 'privacy' | 'terms' | 'license' | null;
 
 function App() {
   const [activeModal, setActiveModal] = useState<ModalType>(null);
+  const [recommendation, setRecommendation] = useState("");
 
   return (
     <div className="min-h-screen selection:bg-primary/30 overflow-x-hidden relative">
@@ -376,16 +377,24 @@ def build_ffmpeg_command(self):
               GOT ANY RECOMMENDATIONS?
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-              We're constantly forging new tools. If you have an idea for a feature, a new preset, or just want to tell us about it, shoot us an email!
+              We're constantly forging new tools. If you have an idea for a feature, a new preset, or just want to tell us about it, drop it below!
             </motion.p>
-            <motion.a 
-              variants={fadeInUp}
-              href="mailto:ideas@mediaforge.app?subject=MediaForge%20Feature%20Recommendation"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-primary text-primary font-heading font-bold text-lg rounded hover:bg-primary hover:text-primary-foreground transition-all"
-            >
-              <Mail className="w-5 h-5" />
-              TELL US ABOUT IT
-            </motion.a>
+            
+            <motion.div variants={fadeInUp} className="max-w-xl mx-auto">
+              <textarea 
+                value={recommendation}
+                onChange={(e) => setRecommendation(e.target.value)}
+                placeholder="I would love to see a feature that..."
+                className="w-full h-32 p-4 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none mb-4 shadow-inner"
+              />
+              <a 
+                href={`mailto:somarohith68@gmail.com?subject=MediaForge%20Recommendation&body=${encodeURIComponent(recommendation)}`}
+                className="inline-flex items-center justify-center w-full gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]"
+              >
+                <Mail className="w-5 h-5" />
+                SEND RECOMMENDATION VIA EMAIL
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </section>
