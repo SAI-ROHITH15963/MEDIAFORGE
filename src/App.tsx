@@ -109,6 +109,24 @@ function App() {
   const [recommendation, setRecommendation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [downloadUrl, setDownloadUrl] = useState("/MediaForge-v1.5.exe");
+  const [version, setVersion] = useState("v1.5");
+
+  // Fetch the latest release from GitHub automatically!
+  useEffect(() => {
+    fetch("https://api.github.com/repos/SAI-ROHITH15963/MEDIAFORGE/releases/latest")
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.assets && data.assets.length > 0) {
+          const exeAsset = data.assets.find((a: any) => a.name.endsWith('.exe'));
+          if (exeAsset) {
+            setDownloadUrl(exeAsset.browser_download_url);
+            setVersion(data.tag_name || "Latest");
+          }
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleSubmit = async () => {
     if (!recommendation.trim()) return;
@@ -160,7 +178,7 @@ function App() {
             <a href="#features" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">ARSENAL</a>
             <a href="#workflow" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">WORKFLOW</a>
             <a href="#specs" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">SPECS</a>
-            <a href="/MediaForge-v1.5.exe" download="MediaForge-v1.5.exe" className="px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
+            <a href={downloadUrl} className="px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
               GET IT NOW
             </a>
           </div>
@@ -190,10 +208,10 @@ function App() {
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <a href="/MediaForge-v1.5.exe" download="MediaForge-v1.5.exe" className="group relative px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] flex items-center justify-center gap-3 overflow-hidden">
+                <a href={downloadUrl} className="group relative px-8 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg rounded transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] flex items-center justify-center gap-3 overflow-hidden">
                   <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                   <Download className="w-5 h-5" />
-                  DOWNLOAD (130MB .EXE)
+                  DOWNLOAD ({version} .EXE)
                 </a>
                 <a href="#features" className="px-8 py-4 bg-transparent border border-border text-foreground font-heading font-bold text-lg rounded hover:bg-card-elevated transition-colors flex items-center justify-center gap-2 group">
                   EXPLORE ARSENAL
