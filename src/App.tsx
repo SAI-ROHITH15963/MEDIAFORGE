@@ -117,7 +117,7 @@ function App() {
     setSubmitStatus('idle');
     try {
       // Replace YOUR_FORMSPREE_ID with the actual ID from formspree.io
-      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+      const response = await fetch("https://formspree.io/f/xgaezgdb", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
