@@ -199,7 +199,7 @@ function App() {
                 v2.2 PORTABLE RELEASE NOW AVAILABLE — READ NOTES
               </motion.div>
               
-              <motion.h1 variants={fadeInUp} className="font-heading font-bold text-6xl md:text-8xl mb-6 leading-[1.05] text-foreground tracking-tight">
+              <motion.h1 variants={fadeInUp} className="font-heading font-bold text-4xl sm:text-6xl md:text-8xl mb-6 leading-[1.05] text-foreground tracking-tight break-words">
                 PURE. OFFLINE. <br/>
                 <span className="text-primary">UNCOMPROMISED.</span>
               </motion.h1>
@@ -227,13 +227,13 @@ function App() {
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="hidden lg:flex justify-end items-center relative lg:translate-x-32"
+              className="flex justify-center lg:justify-end mt-12 lg:mt-0 items-center relative lg:translate-x-32"
             >
               <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full w-3/4 h-3/4 m-auto -z-10" />
               <motion.img 
                 src="/favicon.ico" 
                 alt="MediaForge Logo" 
-                className="w-96 h-96 object-contain drop-shadow-[0_0_40px_rgba(59,130,246,0.5)]"
+                className="w-64 h-64 md:w-96 md:h-96 object-contain drop-shadow-[0_0_40px_rgba(59,130,246,0.5)]"
                 animate={{ y: [0, -20, 0] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               />
@@ -254,8 +254,8 @@ function App() {
       <section id="features" className="py-32 bg-card relative scroll-m-20">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="mb-16">
-            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-5xl mb-4">THE ARSENAL</motion.h2>
-            <motion.p variants={fadeInUp} className="text-muted-foreground text-xl">Industrial-grade tools wrapped in Obsidian Glass.</motion.p>
+            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-3xl md:text-5xl break-words mb-4">THE ARSENAL</motion.h2>
+            <motion.p variants={fadeInUp} className="text-muted-foreground text-lg md:text-xl">Industrial-grade tools wrapped in Obsidian Glass.</motion.p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -307,7 +307,7 @@ function App() {
       <section id="workflow" className="py-32 border-t border-border bg-background scroll-m-20">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="mb-20 text-center">
-            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-5xl mb-4">STREAMLINED WORKFLOW</motion.h2>
+            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-3xl md:text-5xl break-words mb-4">STREAMLINED WORKFLOW</motion.h2>
             <motion.p variants={fadeInUp} className="text-muted-foreground text-xl max-w-2xl mx-auto">From raw files to finished assets in seconds.</motion.p>
           </motion.div>
 
@@ -337,7 +337,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-              <motion.h2 variants={fadeInUp} className="font-heading font-bold text-5xl mb-6">TECHNICAL SPECS</motion.h2>
+              <motion.h2 variants={fadeInUp} className="font-heading font-bold text-3xl md:text-5xl break-words mb-6">TECHNICAL SPECS</motion.h2>
               <motion.p variants={fadeInUp} className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 MediaForge is built on top of a heavily optimized, statically compiled FFmpeg binary. It supports nearly every format imaginable, giving you studio-grade encoding tools wrapped in an accessible UI.
               </motion.p>
@@ -406,7 +406,7 @@ def build_ffmpeg_command(self):
       <section className="py-32 border-t border-border bg-background">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="mb-16 text-center">
-            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-5xl mb-4">FREQUENTLY ASKED QUESTIONS</motion.h2>
+            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-3xl md:text-5xl break-words mb-4">FREQUENTLY ASKED QUESTIONS</motion.h2>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="border-t border-border">
@@ -424,10 +424,10 @@ def build_ffmpeg_command(self):
 
       {/* Recommendations CTA */}
       <section className="py-24 border-t border-border bg-card-elevated relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
-            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-4xl md:text-5xl mb-6 text-foreground">
+            <motion.h2 variants={fadeInUp} className="font-heading font-bold text-3xl md:text-5xl break-words mb-6 text-foreground">
               GOT ANY RECOMMENDATIONS?
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
