@@ -1,5 +1,5 @@
 ﻿<div align="center">
-  <img src="public/favicon.svg" width="128" alt="MediaForge Logo" />
+  <img src="public/logo.png" width="128" alt="MediaForge Logo" />
   <h1>MediaForge</h1>
   <p><strong>Next-Gen Offline Media Converter</strong></p>
 
@@ -85,3 +85,4 @@ Found a bug or want to add a feature? Feel free to open an issue or submit a pul
 
 ## License
 This project is **Source-Available**. You are free to view the code and use the application for personal use, but redistribution, modification for distribution, and commercial use are strictly prohibited. See the LICENSE file for full details. FFmpeg is a trademark of Fabrice Bellard.
+
