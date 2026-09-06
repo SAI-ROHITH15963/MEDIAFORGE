@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <img src="public/logo.png" width="128" alt="MediaForge Logo" />
   <h1>MediaForge</h1>
   <p><strong>Next-Gen Offline Media Converter</strong></p>
@@ -42,9 +42,8 @@ Built from the ground up using a modern web-stack bridging into a Python backend
 
 ## Installation
 
-1. Head to the [Releases Tab](https://github.com/SAI-ROHITH15963/MEDIAFORGE/releases/latest) or our [Official Website](https://mediaforge-project.vercel.app/).
-2. Download the latest MediaForge-v1.5.exe.
-3. Double-click and run! No installation wizard required. 
+1. [Download MediaForge v1.6 for Windows 10/11 (130MB) ⚡](https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v1.6.exe) or our [Official Website](https://mediaforge-project.vercel.app/).
+2. Double-click and run! No installation wizard required. 
 
 *(Note: On the very first launch, it will take ~3 seconds to unpack the FFmpeg engine to your local AppData. Every launch after that is instantaneous).*
 
