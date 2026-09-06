@@ -109,8 +109,8 @@ function App() {
   const [recommendation, setRecommendation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [downloadUrl, setDownloadUrl] = useState("/MediaForge-v1.8.exe");
-  const [version, setVersion] = useState("v1.8");
+  const [downloadUrl, setDownloadUrl] = useState("/MediaForge-v1.9.exe");
+  const [version, setVersion] = useState("v1.9");
 
   // Fetch the latest release from GitHub automatically!
   useEffect(() => {
@@ -194,7 +194,7 @@ function App() {
             <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="max-w-3xl">
               <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-bold mb-8 cursor-pointer hover:bg-primary/10 transition-colors" onClick={() => setActiveModal('releaseNotes')}>
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                v1.8 PORTABLE RELEASE NOW AVAILABLE — READ NOTES
+                v1.9 PORTABLE RELEASE NOW AVAILABLE — READ NOTES
               </motion.div>
               
               <motion.h1 variants={fadeInUp} className="font-heading font-bold text-6xl md:text-8xl mb-6 leading-[1.05] text-foreground tracking-tight">
