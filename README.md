@@ -1,11 +1,11 @@
 ﻿<div align="center">
-  <img src="assets/icon.ico" width="128" alt="MediaForge Logo" />
+  <img src="public/favicon.svg" width="128" alt="MediaForge Logo" />
   <h1>MediaForge</h1>
   <p><strong>Next-Gen Offline Media Converter</strong></p>
 
   <p>
     <a href="https://github.com/SAI-ROHITH15963/MEDIAFORGE/releases/latest">
-      <img src="https://img.shields.io/github/v/release/SAI-ROHITH15963/MEDIAFORGE?style=for-the-badge&color=3b82f6" alt="Latest Release" />
+      <img src="https://img.shields.io/badge/Status-Active-3b82f6?style=for-the-badge" alt="Latest Release" />
     </a>
     <img src="https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge&logo=windows" alt="Platform" />
     <img src="https://img.shields.io/badge/100%25-Offline-success?style=for-the-badge" alt="Offline" />
