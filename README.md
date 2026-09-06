@@ -42,7 +42,7 @@ Built from the ground up using a modern web-stack bridging into a Python backend
 
 ## Installation
 
-1. [Download MediaForge v2.2 for Windows 10/11 (130MB) ⚡](https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.2.exe) or our [Official Website](https://mediaforge-project.vercel.app/).
+1. [Download MediaForge v2.5 for Windows 10/11 (130MB) ⚡](https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.5.exe) or our [Official Website](https://mediaforge-project.vercel.app/).
 2. Double-click and run! No installation wizard required. 
 
 *(Note: On the very first launch, it will take ~3 seconds to unpack the FFmpeg engine to your local AppData. Every launch after that is instantaneous).*

@@ -109,8 +109,8 @@ function App() {
   const [recommendation, setRecommendation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [downloadUrl, setDownloadUrl] = useState("/MediaForge-v2.2.exe");
-  const [version, setVersion] = useState("v2.2");
+  const [downloadUrl, setDownloadUrl] = useState("/MediaForge-v2.5.exe");
+  const [version, setVersion] = useState("v2.5");
 
   // Fetch the latest release from GitHub automatically!
   useEffect(() => {
