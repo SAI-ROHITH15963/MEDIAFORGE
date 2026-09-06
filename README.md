@@ -19,18 +19,18 @@
 
 Say goodbye to Adobe Media Encoder and sketchy online tools. Drop your files in, and let your GPU do the heavy lifting.
 
-## ✨ Killer Features
+## Killer Features
 
-- 🎯 **Target File Size Calculator:** Sick of Discord's "Max 25MB" limit? Type 25 into the Target Size box and MediaForge will mathematically calculate the exact video bitrate required to fit underneath the limit perfectly.
-- ✂️ **Instant Trimming:** Type in a Start and End time to slice out the exact clip you need. Uses FFmpeg's ultra-fast seek algorithms so you don't have to process the entire movie.
-- 🚀 **Next-Gen Hardware Acceleration:** Auto-detects and utilizes **NVIDIA NVENC, AMD AMF, and Intel QSV**. 
-- 🎥 **Future-Proof Codecs:** Full support for **AV1**, **HEVC (H.265)**, H.264, WebM (VP9), and more.
-- 💧 **Custom Watermarking:** Drag-and-drop overlay support. Add your logo to the bottom right of any video.
-- 🎨 **WebP & GIF Maker:** Batch convert video clips or image sequences into lightweight, looping WebP/GIF animations.
-- 🎵 **Smart Audio Extraction:** Instantly rip audio from videos to MP3, WAV, FLAC, or OGG.
-- ⚡ **Sub-Second Cold Starts:** Custom PyInstaller optimizations and local binary caching means the app boots in under 1 second.
+- **Target File Size Calculator:** Sick of Discord's "Max 25MB" limit? Type 25 into the Target Size box and MediaForge will mathematically calculate the exact video bitrate required to fit underneath the limit perfectly.
+- **Instant Trimming:** Type in a Start and End time to slice out the exact clip you need. Uses FFmpeg's ultra-fast seek algorithms so you don't have to process the entire movie.
+- **Next-Gen Hardware Acceleration:** Auto-detects and utilizes **NVIDIA NVENC, AMD AMF, and Intel QSV**. 
+- **Future-Proof Codecs:** Full support for **AV1**, **HEVC (H.265)**, H.264, WebM (VP9), and more.
+- **Custom Watermarking:** Drag-and-drop overlay support. Add your logo to the bottom right of any video.
+- **WebP & GIF Maker:** Batch convert video clips or image sequences into lightweight, looping WebP/GIF animations.
+- **Smart Audio Extraction:** Instantly rip audio from videos to MP3, WAV, FLAC, or OGG.
+- **Sub-Second Cold Starts:** Custom PyInstaller optimizations and local binary caching means the app boots in under 1 second.
 
-## 🖼️ The "Obsidian Glass" Interface
+## The "Obsidian Glass" Interface
 
 Built from the ground up using a modern web-stack bridging into a Python backend.
 * **Frameless Design** with custom titlebars.
@@ -40,7 +40,7 @@ Built from the ground up using a modern web-stack bridging into a Python backend
 
 ---
 
-## 📥 Installation
+## Installation
 
 1. Head to the [Releases Tab](https://github.com/SAI-ROHITH15963/MEDIAFORGE/releases/latest) or our [Official Website](https://mediaforge-project.vercel.app/).
 2. Download the latest MediaForge-v1.5.exe.
@@ -50,7 +50,7 @@ Built from the ground up using a modern web-stack bridging into a Python backend
 
 ---
 
-## 🛠️ For Developers (Build it yourself)
+## For Developers (Build it yourself)
 
 MediaForge uses a modern pywebview architecture (Python backend + React/JS frontend) and leverages fmpeg for core processing.
 
@@ -80,5 +80,8 @@ python main.py
 pyinstaller --clean MediaForge-v1.5.spec
 `
 
-## 🤝 Contributing
+## Contributing
 Found a bug or want to add a feature? Feel free to open an issue or submit a pull request! Feature requests can also be submitted directly through the form on our website.
+
+## License
+This project is **Source-Available**. You are free to view the code and use the application for personal use, but redistribution, modification for distribution, and commercial use are strictly prohibited. See the LICENSE file for full details. FFmpeg is a trademark of Fabrice Bellard.
