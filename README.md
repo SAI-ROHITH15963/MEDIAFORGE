@@ -25,6 +25,9 @@ Say goodbye to Adobe Media Encoder and sketchy online tools. Drop your files in,
 - **Instant Trimming:** Type in a Start and End time to slice out the exact clip you need. Uses FFmpeg's ultra-fast seek algorithms so you don't have to process the entire movie.
 - **Next-Gen Hardware Acceleration:** Auto-detects and utilizes **NVIDIA NVENC, AMD AMF, and Intel QSV**. 
 - **Future-Proof Codecs:** Full support for **AV1**, **HEVC (H.265)**, H.264, WebM (VP9), and more.
+- **Ultra-Fast Parallel Engine:** Processes multiple files simultaneously.
+- **YouTube & TikTok Support:** Download any video directly into an offline file. (TikTok videos are downloaded natively **without watermarks**!).
+- **Smart ETA & Live Progress:** Real-time feedback for all tasks.
 - **Custom Watermarking:** Drag-and-drop overlay support. Add your logo to the bottom right of any video.
 - **WebP & GIF Maker:** Batch convert video clips or image sequences into lightweight, looping WebP/GIF animations.
 - **Smart Audio Extraction:** Instantly rip audio from videos to MP3, WAV, FLAC, or OGG.

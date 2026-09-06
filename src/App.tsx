@@ -174,11 +174,13 @@ function App() {
             <img src="/favicon.ico" alt="Logo" className="w-8 h-8" />
             <span className="font-heading font-bold text-xl tracking-wider">MEDIAFORGE</span>
           </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <a href="#features" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">ARSENAL</a>
-            <a href="#workflow" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">WORKFLOW</a>
-            <a href="#specs" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">SPECS</a>
-            <a href={downloadUrl} className="px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
+          <div className="flex gap-4 md:gap-8 items-center">
+            <div className="hidden md:flex gap-8 items-center">
+              <a href="#features" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">ARSENAL</a>
+              <a href="#workflow" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">WORKFLOW</a>
+              <a href="#specs" className="text-sm font-bold text-muted-foreground hover:text-primary transition-colors tracking-widest">SPECS</a>
+            </div>
+            <a href={downloadUrl} className="px-4 py-2 text-sm md:px-5 md:py-2.5 md:text-base bg-primary text-primary-foreground font-heading font-bold rounded hover:bg-primary/90 transition-colors">
               GET IT NOW
             </a>
           </div>
