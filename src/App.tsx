@@ -532,6 +532,8 @@ def build_ffmpeg_command(self):
               <li>Fixed TikTok link handling and anti-bot bypass.</li>
             </ul>
           </div>
+          <div className="pt-4 border-t border-border">
+            <h4 className="font-heading font-bold text-foreground text-lg mb-2">v1.0.0</h4>
             <ul className="list-disc pl-5 space-y-2">
               <li>Initial public release of MediaForge portable.</li>
               <li>Bundled FFmpeg statically to ensure a zero-dependency 130MB binary.</li>
