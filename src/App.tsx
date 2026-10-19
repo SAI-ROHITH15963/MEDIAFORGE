@@ -134,8 +134,8 @@ function App() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
-      // Replace YOUR_FORMSPREE_ID with the actual ID from formspree.io
-      const response = await fetch("https://formspree.io/f/xgaezgdb", {
+      // User feedback endpoint via Formspree
+      const response = await fetch("https://formspree.io/f/maeqzqgv", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -519,10 +519,12 @@ def build_ffmpeg_command(self):
           <div>
             <h4 className="font-heading font-bold text-foreground text-lg mb-2">v2.8.0 (Latest)</h4>
             <ul className="list-disc pl-5 space-y-2">
+              <li><strong>In-App Auto-Update System:</strong> Seamless in-app download and non-locking hot-swap with 100% data and history preservation!</li>
+              <li><strong>Feedback & Bug Reporter:</strong> Direct in-app communication portal routed to somarohith68@gmail.com with system diagnostics.</li>
+              <li><strong>Download Quality & Resolution:</strong> Max Quality / 4K / 2K / 1080p / 720p / 480p selectors for YouTube, TikTok, Instagram & Spotify.</li>
+              <li><strong>Hardware Benchmark Telemetry:</strong> Obsidian Glass GPU encoder calibration on startup and on-demand.</li>
+              <li><strong>Minimalist Vector UI:</strong> Polished monochrome design system with zero emojis and crisp vector iconography.</li>
               <li><strong>Spotify Downloader:</strong> Full support for downloading Spotify tracks, albums, playlists, and artist top tracks!</li>
-              <li>Integrated 3-tier zero-API Spotify scraper with duration matching for accurate studio audio extraction.</li>
-              <li>Automatic MP3 conversion with embedded ID3 metadata tags (Title, Artist).</li>
-              <li>Auto-switches download mode to "Audio Only (MP3)" upon pasting Spotify links.</li>
             </ul>
           </div>
           <div className="pt-4 border-t border-border">
