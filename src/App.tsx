@@ -109,8 +109,8 @@ function App() {
   const [recommendation, setRecommendation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [downloadUrl, setDownloadUrl] = useState("https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.7.exe");
-  const [version, setVersion] = useState("v2.7");
+  const [downloadUrl, setDownloadUrl] = useState("https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.8.exe");
+  const [version, setVersion] = useState("v2.8");
 
   // Fetch the latest release from GitHub automatically!
   useEffect(() => {
@@ -514,20 +514,24 @@ def build_ffmpeg_command(self):
       </footer>
 
       {/* Modals */}
-      <Modal isOpen={activeModal === 'releaseNotes'} onClose={() => setActiveModal(null)} title="Release Notes (v1.5)">
+      <Modal isOpen={activeModal === 'releaseNotes'} onClose={() => setActiveModal(null)} title="Release Notes (v2.8)">
         <div className="space-y-6 text-muted-foreground">
           <div>
-            <h4 className="font-heading font-bold text-foreground text-lg mb-2">v1.5.0 (Latest)</h4>
+            <h4 className="font-heading font-bold text-foreground text-lg mb-2">v2.8.0 (Latest)</h4>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Added recursive folder drag-and-drop for deep batch processing.</li>
-              <li>Integrated native Windows Toast Notifications upon task completion.</li>
-              <li>New Smart ETA calculations based on real-time hardware speed.</li>
-              <li>Added 5 interactive Wave Themes for the Liquid Glass UI.</li>
-              <li>New feature: Frame Extraction for converting video to .png/.jpg sequences.</li>
+              <li><strong>Spotify Downloader:</strong> Full support for downloading Spotify tracks, albums, playlists, and artist top tracks!</li>
+              <li>Integrated 3-tier zero-API Spotify scraper with duration matching for accurate studio audio extraction.</li>
+              <li>Automatic MP3 conversion with embedded ID3 metadata tags (Title, Artist).</li>
+              <li>Auto-switches download mode to "Audio Only (MP3)" upon pasting Spotify links.</li>
             </ul>
           </div>
           <div className="pt-4 border-t border-border">
-            <h4 className="font-heading font-bold text-foreground text-lg mb-2">v1.0.0</h4>
+            <h4 className="font-heading font-bold text-foreground text-lg mb-2">v2.7.0</h4>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Auto-registered Windows Start Menu shortcut on first launch for native Windows Search indexing.</li>
+              <li>Fixed TikTok link handling and anti-bot bypass.</li>
+            </ul>
+          </div>
             <ul className="list-disc pl-5 space-y-2">
               <li>Initial public release of MediaForge portable.</li>
               <li>Bundled FFmpeg statically to ensure a zero-dependency 130MB binary.</li>

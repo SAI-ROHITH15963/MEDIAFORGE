@@ -26,7 +26,7 @@ Say goodbye to Adobe Media Encoder and sketchy online tools. Drop your files in,
 - **Next-Gen Hardware Acceleration:** Auto-detects and utilizes **NVIDIA NVENC, AMD AMF, and Intel QSV**. 
 - **Future-Proof Codecs:** Full support for **AV1**, **HEVC (H.265)**, H.264, WebM (VP9), and more.
 - **Ultra-Fast Parallel Engine:** Processes multiple files simultaneously.
-- **YouTube & TikTok Support:** Download any video directly into an offline file. (TikTok videos are downloaded natively **without watermarks**!).
+- **YouTube, TikTok, & Spotify Downloader:** Paste any YouTube, TikTok (no watermark), or Spotify link (tracks, albums, playlists) to instantly save offline with clean MP3 tagging and metadata!
 - **Smart ETA & Live Progress:** Real-time feedback for all tasks.
 - **Custom Watermarking:** Drag-and-drop overlay support. Add your logo to the bottom right of any video.
 - **WebP & GIF Maker:** Batch convert video clips or image sequences into lightweight, looping WebP/GIF animations.
@@ -45,7 +45,7 @@ Built from the ground up using a modern web-stack bridging into a Python backend
 
 ## Installation
 
-1. [Download MediaForge v2.7 for Windows 10/11 (130MB) ⚡](https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.7.exe) or our [Official Website](https://mediaforgethetool.vercel.app/).
+1. [Download MediaForge v2.8 for Windows 10/11 (130MB) ⚡](https://github.com/SAI-ROHITH15963/MEDIAFORGE/raw/main/public/MediaForge-v2.8.exe) or our [Official Website](https://mediaforgethetool.vercel.app/).
 2. Double-click and run! No installation wizard required. 
 
 *(Note: On the very first launch, it will take ~3 seconds to unpack the FFmpeg engine to your local AppData. Every launch after that is instantaneous).*
